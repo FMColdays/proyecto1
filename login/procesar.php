@@ -8,12 +8,12 @@ if(!empty($_POST['nickname']) && !empty($_POST['password'])){
     if($nickname == "cliente" && $password == "entrar"){
         $error = "OK"; 
         $_SESSION['nickname'] = $nickname;
-        header("Location: ../personal/cliente.php");
+        header("Location: ../dashboard/cliente.php");
 
     }else if($nickname == "administrador" && $password == "admin"){
         $error = "OK";
         $_SESSION['nickname'] = $nickname;
-        header("Location: ../personal/admin.php");
+        header("Location: ../dashboard/admin.php");
 
     }else{
         $error = "incorrecto";
