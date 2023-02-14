@@ -19,6 +19,7 @@ if(!empty($_POST['nickname']) && !empty($_POST['password'])){
         $error = "incorrecto";
         header("Location: index.php?error=$error");
     }
+
 }else{
     $error = "vacio";
     header("Location: index.php?error=$error");

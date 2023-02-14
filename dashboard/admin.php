@@ -3,34 +3,9 @@ session_start();
 if(isset($_SESSION['nickname']) != "administrador"){
     header("Location: ../login/index.php");
 }
+include("../cabecera.php");
+include("../navbar.php");
 ?>
-
-<?php include("../cabecera.php");?>
-
-<!--Cabecera-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container">
-    <a class="navbar-brand">Administrador</a>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="collapsibleNavId">
-      <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-        <li class="nav-item">
-
-            <a class="nav-link active" href="../login/cerrar.php" aria-current="page">Salir</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-</br>
-<!--FinCabecera-->
-
-
 
 <div class="container">
     <div class="row">

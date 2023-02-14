@@ -1,64 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
-</head>
-
-<body>
-
-    <div class="container">
-
-            <div class="row">
-                <div class="col-md-4">
-            </div>
-                <div class="col-md-4">
-                </br></br></br>
-                <div class="card">
-                    <div class="card-header">
-                        Iniciar sesión
-                    </div>
-                    <div class="card-body">
-
-                    <form action="procesar.php" method="POST">
-
-                    <label for="nickname">Usuario</label>
-                    <input class= "form-control" type="text" name="nickname"><br/>
-
-                    <label for="password">Contraseña</label>
-                    <input class= "form-control" type="password" name="password"><br/>
-
-                    <input class= "btn btn-success" type="submit" value="Acceder"><br/>
-
-                    </form>
-
-                    </div>
-                    <div class="card-footer text-muted">
-                        
-                    </div>
-                </div>           
-        </div>
-                <div class="col-md-4">
-        </div>
-    </div>
-</div>
-
-<?php
-        if(isset($_GET['error'])){
-            $error = $_GET['error'];
-            if($error == "incorrecto"){
-                echo "</br><script> alert('Usuario o contrseña incorrecto'); </script>";
-            }
-            if($error == "vacio"){
-                echo "<script> alert('No has llenado ningun campo'); </script>";
-            }
-        }
+<?php 
+include("../cabecera.php");
+include('error.php');
 ?>
+
+<section class="vh-100" style="background-color: #4F66F0;">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img src="https://img.freepik.com/vector-gratis/mujer-comestibles-supermercado_24877-49907.jpg?w=740&t=st=1676334606~exp=1676335206~hmac=6c51a3a9a3d877a37ed47e5a5f2952e6154e5cff437750cdae377c9a6d66c347"
+                alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+            </div>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
+
+                <form action="procesar.php" method="POST">
+
+                  <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Iniciar Sesión</h5>
+
+                  <div class="form-outline mb-4">
+                    <input type="text" name="nickname" class="form-control form-control-lg" placeholder="Usuario"/>
+                    <label class="form-label" for="form2Example17"></label>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="password" name="password" class="form-control form-control-lg" placeholder="Contraseña"/>
+                    <label class="form-label" for="form2Example27"></label>
+                  </div>
+
+                  <div class="pt-1 mb-4">
+                    <button class="btn btn-dark btn-lg btn-block" type="button" style="background-color:blue; border-color:black; color:white">Acceder</button>
+                  </div>
+
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 </body>
 </html>
