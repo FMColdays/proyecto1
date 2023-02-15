@@ -1,30 +1,27 @@
-  <!--Cabecera-->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand"><?php echo $_SESSION['nickname']?></a>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-      aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+<header>
+  <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand">
+        <strong><?php echo $_SESSION['nickname'] ?></strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+        data-bs-target="#navbarHeader" aria-controls="navbarHeader" 
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="collapsibleNavId">
-      <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-        <li class="nav-item">
+      <div class="collapse navbar-collapse" id="navbarHeader">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            
+          </li>
+        </ul>
+        
+          <a href="../compras/carrito.php" class="btn btn-primary  me-1">Carrito</a>
+          <a href="../login/cerrar.php" class="btn btn-secondary" style = "background-color:red; border-color:red">Salir</a>
+      </div>
 
-            <a class="nav-link active" href="../login/cerrar.php" aria-current="page">Salir</a>
-        </li>
-      </ul>
-    </div>
-
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" data-bs-toggle="modal" data-bs-target="#modal_cart" style="color: red"><?php $total_cantidad; ?></i></a>
-        </li>
-      </ul>
     </div>
   </div>
-</nav>
-</br>
-<!--FinCabecera-->
+</header>

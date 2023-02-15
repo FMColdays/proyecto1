@@ -1,9 +1,18 @@
-<?php 
-include("../cabecera.php");
-include('error.php');
-?>
+<!doctype html>
+<html lang="en">
 
-<section class="vh-100" style="background-color: #4F66F0;">
+<head>
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+<?php include('error.php'); ?>
+ 
+<section class="vh-100" style="background-image: url(https://img.freepik.com/fotos-premium/mano-que-sostiene-telefono-inteligente-sobre-fondo-tienda-supermercado-desenfoque_7190-459.jpg?w=1060);">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">
@@ -31,7 +40,7 @@ include('error.php');
                   </div>
 
                   <div class="pt-1 mb-4">
-                    <button class="btn btn-dark btn-lg btn-block" type="button" style="background-color:blue; border-color:black; color:white">Acceder</button>
+                    <button class="btn btn-dark btn-lg btn-block" type="submit" style="background-color:blue; border-color:black; color:white">Acceder</button>
                   </div>
 
                 </form>

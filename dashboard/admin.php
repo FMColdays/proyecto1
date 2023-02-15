@@ -3,10 +3,21 @@ session_start();
 if(isset($_SESSION['nickname']) != "administrador"){
     header("Location: ../login/index.php");
 }
-include("../cabecera.php");
-include("../navbar.php");
 ?>
 
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Administrador</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+<?php include("../navbar.php"); ?>
 <div class="container">
     <div class="row">
         <div class="col-md-6">
@@ -53,7 +64,7 @@ include("../navbar.php");
                     <tr class="">
                       <td scope="row">Papel</td>
                       <td>$10</td>
-                      <td><img src="../imagenes/papel.png" width="100" height="75"></td>
+                      <td><img src="../imagenes/papelB.png" width="100" height="75"></td>
                     </tr>
                   </tbody>
                 </table>
