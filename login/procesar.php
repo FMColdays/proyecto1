@@ -1,27 +1,23 @@
 <?php
 $error;
 session_start();
-if(!empty($_POST['nickname']) && !empty($_POST['password'])){
+if (!empty($_POST['nickname']) && !empty($_POST['password'])) {
     $nickname = $_POST['nickname'];
     $password = $_POST['password'];
 
-    if($nickname == "cliente" && $password == "entrar"){
-        $error = "OK"; 
+    if ($nickname == "cliente" && $password == "entrar") {
+        $error = "OK";
         $_SESSION['nickname'] = $nickname;
         header("Location: ../dashboard/cliente.php?p=no");
-
-    }else if($nickname == "administrador" && $password == "admin"){
+    } else if ($nickname == "administrador" && $password == "admin") {
         $error = "OK";
         $_SESSION['nickname'] = $nickname;
         header("Location: ../dashboard/admin.php");
-
-    }else{
+    } else {
         $error = "incorrecto";
         header("Location: index.php?error=$error");
     }
-
-}else{
+} else {
     $error = "vacio";
     header("Location: index.php?error=$error");
 }
-?>
