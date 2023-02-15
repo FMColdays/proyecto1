@@ -8,7 +8,7 @@ if(!empty($_POST['nickname']) && !empty($_POST['password'])){
     if($nickname == "cliente" && $password == "entrar"){
         $error = "OK"; 
         $_SESSION['nickname'] = $nickname;
-        header("Location: ../dashboard/cliente.php");
+        header("Location: ../dashboard/cliente.php?p=no");
 
     }else if($nickname == "administrador" && $password == "admin"){
         $error = "OK";
