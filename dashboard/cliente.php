@@ -96,7 +96,7 @@ include("../navbar.php")
         <input name="precio" type="hidden" id="precio" value="22" />
         <input name="titulo" type="hidden" id="titulo" value="Leche" />
         <input name="cantidad" type="hidden" id="cantidad" value="1" class="pl-2" />
-        <img src="../imagenes/leche.png" class="card-img-top">
+        <img src="        ../imagenes/leche.png" class="card-img-top">
         <div class="card-body">
           <h5 class="card-title">Leche</h5>
           <p class="card-text">Descripción - Precio $22</p>
@@ -109,7 +109,7 @@ include("../navbar.php")
         <input name="precio" type="hidden" id="precio" value="10" />
         <input name="titulo" type="hidden" id="titulo" value="Papel" />
         <input name="cantidad" type="hidden" id="cantidad" value="1" class="pl-2" />
-        <img src="../imagenes/papelB.png" class="card-img-top">
+        <img src="../imagenes/papelB.png" class="card-img-top" width="80" height="300">
         <div class="card-body">
           <h5 class="card-title">Papel</h5>
           <p class="card-text">Descripción - Precio $10</p>
