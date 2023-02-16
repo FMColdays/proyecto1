@@ -5,11 +5,11 @@ if (!empty($_POST['nickname']) && !empty($_POST['password'])) {
     $nickname = $_POST['nickname'];
     $password = $_POST['password'];
 
-    if ($nickname == "cliente" && $password == "entrar") {
+    if ($nickname == "cliente" && $password == "123") {
         $error = "OK";
         $_SESSION['nickname'] = $nickname;
         header("Location: ../dashboard/cliente.php?p=no");
-    } else if ($nickname == "administrador" && $password == "admin") {
+    } else if ($nickname == "administrador" && $password == "asd") {
         $error = "OK";
         $_SESSION['nickname'] = $nickname;
         header("Location: ../dashboard/admin.php");

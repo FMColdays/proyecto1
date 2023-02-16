@@ -72,6 +72,11 @@ if (isset($_SESSION['nickname']) != "administrador") {
 
         </div>
       </div>
+      <section class="border p-4 mb-4 rounded-5 d-flex justify-content-center">
+        <div class="col-lg-7">
+          <canvas data-mdb-chart="bar" data-mdb-dataset-label="Traffic" data-mdb-labels="['Monday', 'Tuesday' , 'Wednesday' , 'Thursday' , 'Friday' , 'Saturday' , 'Sunday ']" data-mdb-dataset-data="[2112, 2343, 2545, 3423, 2365, 1985, 987]" class="chart" width="656" height="327" style="display: block; box-sizing: border-box; height: 261.6px; width: 524.8px;"></canvas>
+        </div>
+      </section>
     </div>
 
   </div>
