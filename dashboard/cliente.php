@@ -50,9 +50,6 @@ include("../navbar.php")
   </a>
 </div>
 
-
-
-
 <!--Parte supeiror del carrito-->
 <div class="modal fade" id="modal_cart" tabindex="-1" aria-hidden="true">
   <div class="modal-dialog">
