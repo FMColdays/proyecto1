@@ -3,6 +3,9 @@ session_start();
 if (isset($_SESSION['nickname']) != "administrador") {
   header("Location: ../login/index.php");
 }
+$productos = ["Crassula Perforata", "Arreglo de Suculentas", "Echinocereus Rigidissimus", "Astrophytum Capricorne", "Mammillaria Melaleuca", "Astrophytum Miryostigma"];
+$datosVentas = [42, 78, 51, 30, 62, 38];
+
 ?>
 
 <!doctype html>
@@ -11,12 +14,16 @@ if (isset($_SESSION['nickname']) != "administrador") {
 <head>
   <title>Administrador</title>
   <meta charset="utf-8">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
 </head>
 
+
 <body>
-  <?php include("../navbar.php"); ?>
+  <?php include("../navbar.php"); ?>S
+  </br>
   <div class="container">
     <div class="row">
       <div class="col-md-6">
@@ -44,7 +51,6 @@ if (isset($_SESSION['nickname']) != "administrador") {
             Productos
           </div>
           <div class="card-body">
-
             <table class="table text-center">
               <thead>
                 <tr>
@@ -53,7 +59,6 @@ if (isset($_SESSION['nickname']) != "administrador") {
                   <th scope="col">Imagen</th>
                 </tr>
               </thead>
-
               <tbody>
                 <tr class="">
                   <td scope="row">Leche</td>
@@ -67,20 +72,43 @@ if (isset($_SESSION['nickname']) != "administrador") {
                 </tr>
               </tbody>
             </table>
-
           </div>
 
         </div>
       </div>
-      <section class="border p-4 mb-4 rounded-5 d-flex justify-content-center">
-        <div class="col-lg-7">
-          <canvas data-mdb-chart="bar" data-mdb-dataset-label="Traffic" data-mdb-labels="['Monday', 'Tuesday' , 'Wednesday' , 'Thursday' , 'Friday' , 'Saturday' , 'Sunday ']" data-mdb-dataset-data="[2112, 2343, 2545, 3423, 2365, 1985, 987]" class="chart" width="656" height="327" style="display: block; box-sizing: border-box; height: 261.6px; width: 524.8px;"></canvas>
-        </div>
-      </section>
+      <canvas id="grafica"></canvas>
     </div>
 
   </div>
   </div>
+
+  <script>
+    let miCanvas = document.getElementById("grafica");
+
+    var chart = new Chart(miCanvas, {
+      type: "pie",
+      data: {
+        labels: ["Leche", "Papel", "Mayonesa", "Jabón"],
+        datasets: [{
+          label: "Mi grafica de abarrotes",
+          backgroundColor: [
+            'rgba(163,221,203,0.2)',
+            'rgba(232,233,161,0.2)',
+            'rgba(230,181,102,0.2)',
+            'rgba(229,112,126,0.2)',
+          ],
+          borderColor: [
+            'rgba(163,221,203,1)',
+            'rgba(232,233,161,1)',
+            'rgba(230,181,102,1)',
+            'rgba(229,112,126,1)',
+          ],
+          borderWidth: 2,
+          data: [42, 78, 51, 30]
+        }]
+      }
+    })
+  </script>
 </body>
 
 </html>
