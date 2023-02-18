@@ -19,9 +19,8 @@ if (!isset($_GET['p'])) {
     }
   }
 }
-include("../navbar.php")
+include("../navbar.php");
 ?>
-
 
 <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel">
   <ol class="carousel-indicators">
